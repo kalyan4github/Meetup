@@ -79,7 +79,10 @@ class Employees extends React.Component {
                   <Table.Cell>
                     <Button
                       onClick={() => {
-                        console.log("View Person", person);
+                        this.props.history.push({
+                          pathname: `/${person.firstName}`,
+                          state: person
+                        });
                       }}
                     >
                       View
